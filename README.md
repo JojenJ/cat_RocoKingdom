@@ -1,7 +1,8 @@
 # Roco Kingdom
 
 A real-time cat breed classification game running entirely on an **ESP32-S3-EYE** — no cloud, no Wi-Fi. Point the camera at a cat, the on-device AI identifies the breed, and you capture it to your Pokédex-style collection.
-![alt text](https://github.com/username/reponame/blob/branch/image.jpg?raw=true)
+
+![alt text](https://github.com/JojenJ/cat_RocoKingdom/blob/main/docs/cute.png?raw=true)
 
 ---
 
