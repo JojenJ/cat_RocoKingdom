@@ -2,8 +2,6 @@
 
 A real-time cat breed classification game running entirely on an **ESP32-S3-EYE** — no cloud, no Wi-Fi. Point the camera at a cat, the on-device AI identifies the breed, and you capture it to your Pokédex-style collection.
 
-![alt text](https://github.com/JojenJ/cat_RocoKingdom/blob/main/docs/cute.png?raw=true)
-
 ---
 
 ## Hardware
@@ -197,3 +195,6 @@ Key `menuconfig` options (CatDex menu):
 - **Confidence ~20–34% on real camera input** — domain gap between Oxford-IIIT Pet studio photos and OV2640 real-world capture. Fix: fine-tune with real camera images.
 - Flash alignment warning (`FbsLoader: address not aligned with 16 bytes`) — fix by aligning `.espdl` section in linker script.
 - Inference latency ~1.2 s at 160 MHz — can be reduced by enabling 240 MHz CPU frequency.
+
+
+![alt text](https://github.com/JojenJ/cat_RocoKingdom/blob/main/docs/cute.png?raw=true)
