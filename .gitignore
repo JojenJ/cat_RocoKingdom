@@ -1,0 +1,6 @@
+build/
+.tmp_esp_bsp/
+sdkconfig.old
+*.pyc
+__pycache__/
+.vscode/

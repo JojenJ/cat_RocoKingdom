@@ -1,0 +1,81 @@
+menu "CatDex"
+
+    choice CATDEX_BOARD_PROFILE
+        prompt "Board profile"
+        default CATDEX_BOARD_PROFILE_ESP32_S3_EYE
+
+        config CATDEX_BOARD_PROFILE_ESP32_S3_EYE
+            bool "ESP32-S3-EYE motherboard"
+    endchoice
+
+    config CATDEX_ENABLE_INPUT_DEMO
+        bool "Enable scripted demo input"
+        default y
+
+    config CATDEX_INPUT_ADC_LOG_RAW
+        bool "Log raw ADC keypad samples"
+        default n
+
+    config CATDEX_INPUT_ADC_TOLERANCE_MV
+        int "ADC keypad tolerance in mV"
+        range 80 500
+        default 220
+
+    config CATDEX_CAMERA_RESET_GPIO
+        int "Camera reset GPIO override"
+        range -1 48
+        default -1
+
+    config CATDEX_CAMERA_PWDN_GPIO
+        int "Camera power-down GPIO override"
+        range -1 48
+        default -1
+
+    config CATDEX_DISPLAY_TEXT_LOG_ONLY
+        bool "Use text log display backend only"
+        default y
+
+    config CATDEX_DISPLAY_LOG_MIRROR
+        bool "Mirror rendered frames to serial logs even when LCD backend is enabled"
+        default y
+
+    config CATDEX_DISPLAY_BOOT_TEST
+        bool "Run LCD color self-test during boot"
+        default y
+
+    config CATDEX_DISPLAY_BOOT_TEST_MS
+        int "LCD self-test step duration (ms)"
+        range 80 2000
+        default 240
+
+    config CATDEX_DISPLAY_BACKLIGHT_ACTIVE_HIGH
+        bool "LCD backlight active level is high"
+        default y
+
+    config CATDEX_DISPLAY_BACKLIGHT_SWEEP
+        bool "Sweep both backlight polarities during boot test"
+        default y
+
+    config CATDEX_DISPLAY_SWAP_XY
+        bool "Swap LCD X/Y axes"
+        default n
+
+    config CATDEX_DISPLAY_MIRROR_X
+        bool "Mirror LCD X axis"
+        default n
+
+    config CATDEX_DISPLAY_MIRROR_Y
+        bool "Mirror LCD Y axis"
+        default n
+
+    config CATDEX_DISPLAY_X_GAP
+        int "Extra LCD X gap"
+        range 0 80
+        default 0
+
+    config CATDEX_DISPLAY_Y_GAP
+        int "Extra LCD Y gap"
+        range 0 80
+        default 0
+
+endmenu

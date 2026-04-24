@@ -1,0 +1,29 @@
+menu "CatDex AI"
+
+choice CATDEX_CLASSIFIER_BACKEND
+    prompt "Classifier backend"
+    default CATDEX_CLASSIFIER_BACKEND_MODEL_STUB
+    help
+        Select which inference backend is used by classifier.c.
+
+    config CATDEX_CLASSIFIER_BACKEND_MOCK
+        bool "Mock backend"
+
+    config CATDEX_CLASSIFIER_BACKEND_MODEL_STUB
+        bool "Model stub backend"
+
+    config CATDEX_CLASSIFIER_BACKEND_ESPDL
+        bool "esp-dl real model (student96_w1_s3_ptq.espdl)"
+endchoice
+
+config CATDEX_CLASSIFIER_MODEL_INPUT_WIDTH
+    int "Model input width"
+    range 48 160
+    default 96
+
+config CATDEX_CLASSIFIER_MODEL_INPUT_HEIGHT
+    int "Model input height"
+    range 48 160
+    default 96
+
+endmenu
